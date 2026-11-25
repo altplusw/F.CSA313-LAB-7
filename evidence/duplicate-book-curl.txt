@@ -1,0 +1,36 @@
+--- Fresh list ---
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Date: Wed, 25 Nov 2026 12:54:19 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+[{"id":1,"title":"Тунгалаг Тамир","author":"Ч.Лодойдамба","year":1971},{"id":2,"title":"Clean Code","author":"Robert C. Martin","year":2008},{"id":3,"title":"The Pragmatic Programmer","author":"D.Thomas & A.Hunt","year":1999}]
+--- First add ---
+HTTP/1.1 201 Created
+Content-Type: application/json
+Date: Wed, 25 Nov 2026 12:54:19 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"result":"OK","id":4}
+--- Same book again ---
+HTTP/1.1 201 Created
+Content-Type: application/json
+Date: Wed, 25 Nov 2026 12:54:19 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"result":"OK","id":5}
+--- Resulting list ---
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Date: Wed, 25 Nov 2026 12:54:19 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+[{"id":1,"title":"Тунгалаг Тамир","author":"Ч.Лодойдамба","year":1971},{"id":2,"title":"Clean Code","author":"Robert C. Martin","year":2008},{"id":3,"title":"The Pragmatic Programmer","author":"D.Thomas & A.Hunt","year":1999},{"id":4,"title":"River Notes","author":"Mara Reed","year":1999},{"id":5,"title":"River Notes","author":"Mara Reed","year":1999}]
